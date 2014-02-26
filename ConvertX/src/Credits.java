@@ -153,7 +153,7 @@ public class Credits extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        ConvertX.main(null);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
