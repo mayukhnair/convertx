@@ -409,7 +409,7 @@ public class ConvertX extends javax.swing.JFrame {
                    bitra=64000;
                    chana=1;
                    sampa=22050;
-                   videocodec="libx264";
+                   videocodec="libxvid";
                    bitrv=192000;
                    framv=30;
                    size1=640;
