@@ -334,7 +334,7 @@ public class ConvertX extends javax.swing.JFrame {
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
-        jLabel13.setText("ConvertX version 0.1 Alpha © 2014 Mayukh Nair. All rights reserved.");
+        jLabel13.setText("ConvertX version 0.1 Beta © 2014 Mayukh Nair. All rights reserved.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -555,6 +555,19 @@ public class ConvertX extends javax.swing.JFrame {
                    formatid=".mp3";
                    format="mp3";
                    break;
+<<<<<<< HEAD
+=======
+            case 1:audiocodec="pcm_s16le";
+                   bitra=176400;
+                   chana=1;
+                   sampa=11025;
+                   bitr_a.setText(""+bitra);
+                   chan_a.setText(""+chana);
+                   samp_a.setText(""+sampa);
+                   formatid=".wav";
+                   format="wav";
+                   break;
+>>>>>>> origin/master
         }
     }//GEN-LAST:event_AudioFormatBoxActionPerformed
 

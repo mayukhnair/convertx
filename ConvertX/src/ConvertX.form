@@ -479,7 +479,7 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel13">
       <Properties>
-        <Property name="text" type="java.lang.String" value="ConvertX version 0.1 Alpha &#xa9; 2014 Mayukh Nair. All rights reserved."/>
+        <Property name="text" type="java.lang.String" value="ConvertX version 0.1 Beta &#xa9; 2014 Mayukh Nair. All rights reserved."/>
       </Properties>
     </Component>
   </SubComponents>
