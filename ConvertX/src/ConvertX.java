@@ -119,11 +119,6 @@ public class ConvertX extends javax.swing.JFrame {
         });
 
         AudioFormatBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MPEG-4 Audio Layer 3 (.mp3)", "Wave Audio (.wav)", "OGG Vorbis Audio (.ogg)" }));
-        AudioFormatBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AudioFormatBoxActionPerformed(evt);
-            }
-        });
 
         jLabel1.setText("Video Formats");
 
@@ -507,9 +502,7 @@ public class ConvertX extends javax.swing.JFrame {
         audio.setBitRate(Integer.parseInt(bitr_a.getText()));
         audio.setChannels(Integer.parseInt(chan_a.getText()));
         audio.setSamplingRate(Integer.parseInt(samp_a.getText()));
-       if(formatid.equals(".flv") && formatid.equals(".mp4") && formatid.equals(".avi") && formatid.equals(".flv") && formatid.equals(".vob")) 
-       {
-           VideoAttributes video=new VideoAttributes();
+        VideoAttributes video=new VideoAttributes();
         video.setCodec(videocodec);
         video.setBitRate(Integer.parseInt(bitr_v.getText()));
         video.setFrameRate(Integer.parseInt(fram_v.getText()));
@@ -520,12 +513,7 @@ public class ConvertX extends javax.swing.JFrame {
         attrs.setVideoAttributes(video);
         Encoder encode=new Encoder();
         encode.encode(input, output, attrs);
-        }
-       EncodingAttributes attrs=new EncodingAttributes();
-        attrs.setFormat(format);
-        attrs.setAudioAttributes(audio);
-        Encoder encode=new Encoder();
-        encode.encode(input, output, attrs);
+       
         }
        catch (EncoderException | IllegalArgumentException e){
            JOptionPane.showMessageDialog(null, e);
@@ -536,29 +524,6 @@ public class ConvertX extends javax.swing.JFrame {
         // TODO add your handling code here:
         Credits.main(null);
     }//GEN-LAST:event_AboutButtonActionPerformed
-
-    private void AudioFormatBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AudioFormatBoxActionPerformed
-        // TODO add your handling code here:
-        VideoFormatBox.setEnabled(false);
-        parampanel.setEnabled(true);
-        audioparam.setEnabled(true);
-        videoparam.setEnabled(false);
-        StartButton.setEnabled(true);
-        int state=AudioFormatBox.getSelectedIndex();
-        switch(state){
-            case 0:audiocodec="libmp3lame";
-                   bitra=64000;
-                   chana=1;
-                   sampa=22050;
-                   bitr_a.setText(""+bitra);
-                   chan_a.setText(""+chana);
-                   samp_a.setText(""+sampa);
-                   formatid=".mp3";
-                   format="mp3";
-                   break;
-          
-        }
-    }//GEN-LAST:event_AudioFormatBoxActionPerformed
 
     /**
      * @param args the command line arguments
