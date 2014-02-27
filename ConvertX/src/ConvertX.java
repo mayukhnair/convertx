@@ -334,7 +334,7 @@ public class ConvertX extends javax.swing.JFrame {
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
-        jLabel13.setText("ConvertX version 0.1 Beta © 2014 Mayukh Nair. All rights reserved.");
+        jLabel13.setText("ConvertX version 0.2 Alpha (Video-only) © 2014 Mayukh Nair. All rights reserved.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
