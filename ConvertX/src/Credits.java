@@ -44,7 +44,7 @@ public class Credits extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Version.setText("Version: 0.2-beta");
+        Version.setText("Version: 0.2-alpha (video only)");
         Version.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         appTitle.setFont(new java.awt.Font("Ubuntu Medium", 1, 24)); // NOI18N
