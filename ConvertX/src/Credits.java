@@ -39,10 +39,12 @@ public class Credits extends javax.swing.JFrame {
         closeButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         credit1 = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Version.setText("Version: 0.1.1-alpha (Video only)");
+        Version.setText("Version: 0.2-beta");
         Version.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         appTitle.setFont(new java.awt.Font("Ubuntu Medium", 1, 24)); // NOI18N
@@ -52,16 +54,15 @@ public class Credits extends javax.swing.JFrame {
 
         copyrigtText.setText("© 2014 Mayukh Nair. All rights reserved.");
 
-        credit.setEditable(false);
         credit.setColumns(20);
+        credit.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         credit.setLineWrap(true);
         credit.setRows(5);
         credit.setTabSize(4);
-        credit.setText("Powered by JAVE-Java Audio Video Encoder. \n© 2009 Sauron Software S.p.A.\n\nJava, the Java Mug Logo, Duke and other logos are registered trademarks of their respective owners.");
+        credit.setText("Powered by JAVE-Java Audio Video Encoder. \n© 2009 Sauron Software S.p.A.\n\nJava, the Java Mug Logo, Duke and other logos are registered trademarks of Sun Microsystems, Inc./ Oracle Corporation. ©1993-2014 Sun Microsystems/Oracle Corporation. By using this program, you agree to any terms and conditions put forward by Sun Microsystems, Inc. and Oracle Corporation.\n\nThis program uses libraries from the FFMPEG project and it's contributors. © 2014 The FFMPEG Project and it's contributors. All rights reserved. By using this program, you agree to any terms and conditions put forward by the FFMPEG project and it's contributors.\n");
         credit.setWrapStyleWord(true);
         credit.setCaretColor(java.awt.Color.red);
         credit.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        credit.setMargin(new java.awt.Insets(2, 2, 2, 2));
         jScrollPane1.setViewportView(credit);
 
         closeButton.setText("Close");
@@ -71,17 +72,20 @@ public class Credits extends javax.swing.JFrame {
             }
         });
 
-        credit1.setEditable(false);
         credit1.setColumns(20);
+        credit1.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         credit1.setLineWrap(true);
         credit1.setRows(5);
         credit1.setTabSize(4);
-        credit1.setText("Coding, Design and Support by Mayukh Nair\nTesting: Mayukh Nair (Windows), Shubham Rao (Ubuntu/OpenSUSE) Harsh Songra (Mac OS X)\nGUI Tweaking (Linux) and Issue patching by Shubham Rao\nFor feedback/complaints, contact the developer at nairmayukh@gmail.com.");
+        credit1.setText("Coding, Design and Support by Mayukh Nair\nTesting: Mayukh Nair, Rohitashva Vashishtha (Windows), Shubham Rao (Ubuntu/OpenSUSE), Harsh Songra (Mac OS X)\nGUI Tweaking (Linux) and Issue patching by Shubham Rao\nFor feedback/complaints, contact the developer at nairmayukh@gmail.com.\nHave an issue? Let the developers know. File an issue at http://www.github.com/mayukhnair/convertx");
         credit1.setWrapStyleWord(true);
         credit1.setCaretColor(java.awt.Color.red);
         credit1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        credit1.setMargin(new java.awt.Insets(2, 2, 2, 2));
         jScrollPane2.setViewportView(credit1);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imglib/ffmpeg-logo.png"))); // NOI18N
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imglib/java.svg.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,22 +99,35 @@ public class Credits extends javax.swing.JFrame {
                         .addComponent(closeButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(appTitle)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(12, 12, 12)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(appTitle)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel2)
+                                        .addGap(18, 18, 18))
                                     .addComponent(copyrigtText)
-                                    .addComponent(Version)))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
-                            .addComponent(jScrollPane2))
+                                    .addComponent(Version))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(appTitle)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(appTitle)
+                            .addComponent(jLabel1))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Version)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -118,7 +135,7 @@ public class Credits extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(closeButton)
                 .addContainerGap())
@@ -183,6 +200,8 @@ public class Credits extends javax.swing.JFrame {
     private javax.swing.JLabel copyrigtText;
     private javax.swing.JTextArea credit;
     private javax.swing.JTextArea credit1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
