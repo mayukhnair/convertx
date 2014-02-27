@@ -91,7 +91,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="Version">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Version: 0.2-alpha (video only)"/>
+        <Property name="text" type="java.lang.String" value="Version: 0.3-beta Release Candidate 1"/>
         <Property name="horizontalTextPosition" type="int" value="2"/>
       </Properties>
     </Component>
@@ -126,7 +126,7 @@
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
             <Property name="tabSize" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="Powered by JAVE-Java Audio Video Encoder. &#xa;&#xa9; 2009 Sauron Software S.p.A.&#xa;&#xa;Java, the Java Mug Logo, Duke and other logos are registered trademarks of Sun Microsystems, Inc./ Oracle Corporation. &#xa9;1993-2014 Sun Microsystems/Oracle Corporation. By using this program, you agree to any terms and conditions put forward by Sun Microsystems, Inc. and Oracle Corporation.&#xa;&#xa;This program uses libraries from the FFMPEG project and it&apos;s contributors. &#xa9; 2014 The FFMPEG Project and it&apos;s contributors. All rights reserved. By using this program, you agree to any terms and conditions put forward by the FFMPEG project and it&apos;s contributors.&#xa;"/>
+            <Property name="text" type="java.lang.String" value="Powered by JAVE-Java Audio Video Encoder. &#xa;&#xa9; 2009 Sauron Software S.p.A.&#xa;&#xa;Java, the Java Mug Logo, Duke and other logos are registered trademarks of Sun Microsystems, Inc./ Oracle Corporation. &#xa9;1993-2014 Sun Microsystems/Oracle Corporation. By using this program, you agree to any terms and conditions put forward by Sun Microsystems, Inc. and Oracle Corporation.&#xa;&#xa;This program uses libraries from the FFMPEG project and it&apos;s contributors. &#xa9; 2014 The FFMPEG Project and it&apos;s contributors. All rights reserved. By using this program, you agree to any terms and conditions put forward by the FFMPEG project and it&apos;s contributors.&#xa;&#xa;Colourful Music-image courtesy CoverBooth. http://coverbooth.com. &#xa;Used without license on non-commercial rights."/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
             <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" id="red" palette="1" red="ff" type="palette"/>

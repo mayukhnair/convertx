@@ -44,7 +44,7 @@ public class Credits extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Version.setText("Version: 0.2-alpha (video only)");
+        Version.setText("Version: 0.3-beta Release Candidate 1");
         Version.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
         appTitle.setFont(new java.awt.Font("Ubuntu Medium", 1, 24)); // NOI18N
@@ -59,7 +59,7 @@ public class Credits extends javax.swing.JFrame {
         credit.setLineWrap(true);
         credit.setRows(5);
         credit.setTabSize(4);
-        credit.setText("Powered by JAVE-Java Audio Video Encoder. \n© 2009 Sauron Software S.p.A.\n\nJava, the Java Mug Logo, Duke and other logos are registered trademarks of Sun Microsystems, Inc./ Oracle Corporation. ©1993-2014 Sun Microsystems/Oracle Corporation. By using this program, you agree to any terms and conditions put forward by Sun Microsystems, Inc. and Oracle Corporation.\n\nThis program uses libraries from the FFMPEG project and it's contributors. © 2014 The FFMPEG Project and it's contributors. All rights reserved. By using this program, you agree to any terms and conditions put forward by the FFMPEG project and it's contributors.\n");
+        credit.setText("Powered by JAVE-Java Audio Video Encoder. \n© 2009 Sauron Software S.p.A.\n\nJava, the Java Mug Logo, Duke and other logos are registered trademarks of Sun Microsystems, Inc./ Oracle Corporation. ©1993-2014 Sun Microsystems/Oracle Corporation. By using this program, you agree to any terms and conditions put forward by Sun Microsystems, Inc. and Oracle Corporation.\n\nThis program uses libraries from the FFMPEG project and it's contributors. © 2014 The FFMPEG Project and it's contributors. All rights reserved. By using this program, you agree to any terms and conditions put forward by the FFMPEG project and it's contributors.\n\nColourful Music-image courtesy CoverBooth. http://coverbooth.com. \nUsed without license on non-commercial rights.");
         credit.setWrapStyleWord(true);
         credit.setCaretColor(java.awt.Color.red);
         credit.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
