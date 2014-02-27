@@ -500,14 +500,12 @@ public class ConvertX extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
         File input=new File(fileLocn);
-        File output=new File(filax+formatid);
-       
+        File output=new File(filax+formatid); 
         AudioAttributes audio=new AudioAttributes();
         audio.setCodec(audiocodec);
         audio.setBitRate(Integer.parseInt(bitr_a.getText()));
         audio.setChannels(Integer.parseInt(chan_a.getText()));
         audio.setSamplingRate(Integer.parseInt(samp_a.getText()));
-        if(formatid.equals(".flv") && formatid.equals(".mp4") && formatid.equals(".avi") && formatid.equals(".vob") && formatid.equals(".3gp")){
          VideoAttributes video=new VideoAttributes();
         video.setCodec(videocodec);
         video.setBitRate(Integer.parseInt(bitr_v.getText()));
@@ -520,12 +518,7 @@ public class ConvertX extends javax.swing.JFrame {
         Encoder encode=new Encoder();
         encode.encode(input, output, attrs);
         }
-        EncodingAttributes attrs=new EncodingAttributes();
-        attrs.setFormat(format);
-        attrs.setAudioAttributes(audio);
-        Encoder encode=new Encoder();
-        encode.encode(input, output, attrs);
-        }
+  
        catch (EncoderException | IllegalArgumentException e){
            JOptionPane.showMessageDialog(null, e);
        }
@@ -555,8 +548,6 @@ public class ConvertX extends javax.swing.JFrame {
                    formatid=".mp3";
                    format="mp3";
                    break;
-<<<<<<< HEAD
-=======
             case 1:audiocodec="pcm_s16le";
                    bitra=176400;
                    chana=1;
@@ -567,9 +558,7 @@ public class ConvertX extends javax.swing.JFrame {
                    formatid=".wav";
                    format="wav";
                    break;
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
+
             case 2:audiocodec="vorbis";
                    bitra=128000;
                    chana=1;
@@ -580,7 +569,6 @@ public class ConvertX extends javax.swing.JFrame {
                    formatid=".ogg";
                    format="ogg";
                    break;
->>>>>>> Buggy .OGG Vorbis audio support
         }
     }//GEN-LAST:event_AudioFormatBoxActionPerformed
 
