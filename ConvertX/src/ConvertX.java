@@ -12,8 +12,6 @@ import it.sauronsoftware.jave.EncodingAttributes;
 import it.sauronsoftware.jave.Encoder;
 import javax.swing.JOptionPane;
 import it.sauronsoftware.jave.EncoderException;
-import it.sauronsoftware.jave.InputFormatException;
-import java.lang.IllegalArgumentException;
 
 /**
  *
@@ -45,35 +43,34 @@ public class ConvertX extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         filelocation = new javax.swing.JTextField();
         BrowseButton = new javax.swing.JButton();
-        formatpanel = new javax.swing.JPanel();
-        VideoFormatBox = new javax.swing.JComboBox();
-        AudioFormatBox = new javax.swing.JComboBox();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel2 = new javax.swing.JPanel();
         parampanel = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
         audioparam = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
         bitr_a = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
         chan_a = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
         samp_a = new javax.swing.JTextField();
-        videoparam = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        bitr_v = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        fram_v = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        size_1 = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        size_2 = new javax.swing.JTextField();
         StartButton = new javax.swing.JButton();
         ExitButton = new javax.swing.JButton();
         progbar = new javax.swing.JProgressBar();
         AboutButton = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
+        videoparam = new javax.swing.JPanel();
+        jLabel64 = new javax.swing.JLabel();
+        bitr_v = new javax.swing.JTextField();
+        jLabel65 = new javax.swing.JLabel();
+        fram_v = new javax.swing.JTextField();
+        jLabel66 = new javax.swing.JLabel();
+        size_1 = new javax.swing.JTextField();
+        jLabel67 = new javax.swing.JLabel();
+        size_2 = new javax.swing.JTextField();
+        VideoFormatBox = new javax.swing.JComboBox();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
 
         jLabel5.setText("jLabel5");
 
@@ -94,8 +91,8 @@ public class ConvertX extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(filelocation, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(filelocation)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BrowseButton)
                 .addContainerGap())
         );
@@ -109,68 +106,23 @@ public class ConvertX extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        formatpanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Convert to what?"));
-
-        VideoFormatBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Flash Video (.flv)", "Audio Video Interleave (.avi)", "MPEG-4 Video (.mp4)", "3GPP Video (.3gp)", "DVD Video (.vob)" }));
-        VideoFormatBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VideoFormatBoxActionPerformed(evt);
-            }
-        });
-
-        AudioFormatBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MPEG-4 Audio Layer 3 (.mp3)", "Wave Audio (.wav)", "OGG Vorbis Audio (.ogg)" }));
-        AudioFormatBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AudioFormatBoxActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setText("Video Formats");
-
-        jLabel2.setText("Audio Formats");
-
-        javax.swing.GroupLayout formatpanelLayout = new javax.swing.GroupLayout(formatpanel);
-        formatpanel.setLayout(formatpanelLayout);
-        formatpanelLayout.setHorizontalGroup(
-            formatpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(formatpanelLayout.createSequentialGroup()
-                .addGroup(formatpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(VideoFormatBox, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(formatpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(AudioFormatBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)))
-        );
-        formatpanelLayout.setVerticalGroup(
-            formatpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(formatpanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(formatpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(formatpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(VideoFormatBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AudioFormatBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
+        jLabel13.setText("ConvertX version 0.1 Beta © 2014 Mayukh Nair. All rights reserved.");
 
         parampanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Geeky Stuff"));
         parampanel.setEnabled(false);
 
-        jLabel3.setText("Unless you know what these parameters mean, you don't need to change them.");
+        jLabel59.setText("Unless you know what these parameters mean, you don't need to change them.");
 
-        jLabel4.setText("ConvertX will take care of it.");
+        jLabel60.setText("ConvertX will take care of it.");
 
         audioparam.setBorder(javax.swing.BorderFactory.createTitledBorder("Audio Parameters"));
         audioparam.setEnabled(false);
 
-        jLabel6.setText("Bitrate:");
+        jLabel61.setText("Bitrate:");
 
-        jLabel7.setText("No. of channels:");
+        jLabel62.setText("No. of channels:");
 
-        jLabel8.setText("Sampling rate:");
+        jLabel63.setText("Sampling rate:");
 
         javax.swing.GroupLayout audioparamLayout = new javax.swing.GroupLayout(audioparam);
         audioparam.setLayout(audioparamLayout);
@@ -179,15 +131,15 @@ public class ConvertX extends javax.swing.JFrame {
             .addGroup(audioparamLayout.createSequentialGroup()
                 .addGroup(audioparamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(audioparamLayout.createSequentialGroup()
-                        .addComponent(jLabel6)
+                        .addComponent(jLabel61)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bitr_a, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7)
+                        .addComponent(jLabel62)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(chan_a, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(audioparamLayout.createSequentialGroup()
-                        .addComponent(jLabel8)
+                        .addComponent(jLabel63)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(samp_a, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 4, Short.MAX_VALUE))
@@ -197,68 +149,14 @@ public class ConvertX extends javax.swing.JFrame {
             .addGroup(audioparamLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(audioparamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
+                    .addComponent(jLabel61)
                     .addComponent(bitr_a, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7)
+                    .addComponent(jLabel62)
                     .addComponent(chan_a, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(audioparamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
+                    .addComponent(jLabel63)
                     .addComponent(samp_a, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        videoparam.setBorder(javax.swing.BorderFactory.createTitledBorder("Video Parameters"));
-        videoparam.setEnabled(false);
-
-        jLabel9.setText("Bitrate:");
-
-        jLabel10.setText("Frame rate:");
-
-        jLabel11.setText("Resolution:");
-
-        jLabel12.setText("x");
-
-        javax.swing.GroupLayout videoparamLayout = new javax.swing.GroupLayout(videoparam);
-        videoparam.setLayout(videoparamLayout);
-        videoparamLayout.setHorizontalGroup(
-            videoparamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(videoparamLayout.createSequentialGroup()
-                .addGroup(videoparamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(videoparamLayout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bitr_v, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(fram_v))
-                    .addGroup(videoparamLayout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(size_1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(size_2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        videoparamLayout.setVerticalGroup(
-            videoparamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(videoparamLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(videoparamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(bitr_v, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
-                    .addComponent(fram_v, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(videoparamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(size_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12)
-                    .addComponent(size_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -286,6 +184,60 @@ public class ConvertX extends javax.swing.JFrame {
             }
         });
 
+        videoparam.setBorder(javax.swing.BorderFactory.createTitledBorder("Video Parameters"));
+        videoparam.setEnabled(false);
+
+        jLabel64.setText("Bitrate:");
+
+        jLabel65.setText("Frame rate:");
+
+        jLabel66.setText("Resolution:");
+
+        jLabel67.setText("x");
+
+        javax.swing.GroupLayout videoparamLayout = new javax.swing.GroupLayout(videoparam);
+        videoparam.setLayout(videoparamLayout);
+        videoparamLayout.setHorizontalGroup(
+            videoparamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(videoparamLayout.createSequentialGroup()
+                .addGroup(videoparamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(videoparamLayout.createSequentialGroup()
+                        .addComponent(jLabel64)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(bitr_v, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel65)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(fram_v, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE))
+                    .addGroup(videoparamLayout.createSequentialGroup()
+                        .addComponent(jLabel66)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(size_1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel67)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(size_2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        videoparamLayout.setVerticalGroup(
+            videoparamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(videoparamLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(videoparamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel64)
+                    .addComponent(bitr_v, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel65)
+                    .addComponent(fram_v, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(videoparamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel66)
+                    .addComponent(size_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel67)
+                    .addComponent(size_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout parampanelLayout = new javax.swing.GroupLayout(parampanel);
         parampanel.setLayout(parampanelLayout);
         parampanelLayout.setHorizontalGroup(
@@ -293,17 +245,17 @@ public class ConvertX extends javax.swing.JFrame {
             .addGroup(parampanelLayout.createSequentialGroup()
                 .addGroup(parampanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(parampanelLayout.createSequentialGroup()
-                        .addGroup(parampanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(videoparam, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(audioparam, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(parampanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(audioparam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(videoparam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(parampanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(StartButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(ExitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(AboutButton, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE))
                         .addGap(25, 25, 25))
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabel59)
+                    .addComponent(jLabel60))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(parampanelLayout.createSequentialGroup()
                 .addComponent(progbar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -313,28 +265,59 @@ public class ConvertX extends javax.swing.JFrame {
             parampanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(parampanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3)
+                .addComponent(jLabel59)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addGroup(parampanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(parampanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(audioparam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(videoparam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(parampanelLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(StartButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ExitButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(AboutButton)))
+                .addComponent(jLabel60)
                 .addGap(18, 18, 18)
+                .addGroup(parampanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, parampanelLayout.createSequentialGroup()
+                        .addComponent(videoparam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18))
+                    .addGroup(parampanelLayout.createSequentialGroup()
+                        .addGroup(parampanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(parampanelLayout.createSequentialGroup()
+                                .addGap(50, 50, 50)
+                                .addComponent(StartButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ExitButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(AboutButton))
+                            .addComponent(audioparam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(73, 73, 73)))
                 .addComponent(progbar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        jLabel13.setText("ConvertX version 0.2 Alpha (Video-only) © 2014 Mayukh Nair. All rights reserved.");
+        VideoFormatBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Flash Video (.flv)", "Audio Video Interleave (.avi)", "MPEG-4 Video (.mp4)", "3GPP Video (.3gp)", "DVD Video (.vob)" }));
+        VideoFormatBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VideoFormatBoxActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(parampanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(VideoFormatBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(VideoFormatBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(parampanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Convert to Video", jPanel2);
+        jTabbedPane1.addTab("Convert to Audio", jTabbedPane2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -343,24 +326,20 @@ public class ConvertX extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(formatpanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(parampanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTabbedPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel13)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(formatpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(parampanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel13)
                 .addContainerGap())
         );
@@ -370,12 +349,10 @@ public class ConvertX extends javax.swing.JFrame {
 
     private void BrowseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BrowseButtonActionPerformed
         // TODO add your handling code here:
-        AudioFormatBox.setEnabled(true);
         JFileChooser FilePicker=new JFileChooser();
         int returnVal = FilePicker.showOpenDialog(this);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
         File file=FilePicker.getSelectedFile();
-        formatpanel.setEnabled(true);
         fileLocn=file.getPath();
         filelocation.setText(fileLocn);
         filax=fileLocn.substring(0, fileLocn.indexOf("."));
@@ -383,8 +360,7 @@ public class ConvertX extends javax.swing.JFrame {
     }//GEN-LAST:event_BrowseButtonActionPerformed
 
     private void VideoFormatBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VideoFormatBoxActionPerformed
-        // TODO add your handling code here:
-        AudioFormatBox.setEnabled(false);
+        // TODO add your handling code here
         parampanel.setEnabled(true);
         audioparam.setEnabled(true);
         videoparam.setEnabled(true);
@@ -392,185 +368,143 @@ public class ConvertX extends javax.swing.JFrame {
         int state=VideoFormatBox.getSelectedIndex();
         switch(state){
             case 0:audiocodec="libmp3lame";
-                   bitra=64000;
-                   chana=1;
-                   sampa=22050;
-                   videocodec="flv";
-                   bitrv=160000;
-                   framv=15;
-                   size1=640;
-                   size2=480;
-                   bitr_a.setText(""+bitra);
-                   chan_a.setText(""+chana);
-                   samp_a.setText(""+sampa);
-                   bitr_v.setText(""+bitrv);
-                   fram_v.setText(""+framv);
-                   size_1.setText(""+size1);
-                   size_2.setText(""+size2);
-                   formatid=".flv";
-                   format="flv";
-                   break;
-           case 1:audiocodec="libmp3lame";
-                   bitra=64000;
-                   chana=1;
-                   sampa=22050;
-                   videocodec="libxvid";
-                   bitrv=192000;
-                   framv=30;
-                   size1=640;
-                   size2=480;
-                   bitr_a.setText(""+bitra);
-                   chan_a.setText(""+chana);
-                   samp_a.setText(""+sampa);
-                   bitr_v.setText(""+bitrv);
-                   fram_v.setText(""+framv);
-                   size_1.setText(""+size1);
-                   size_2.setText(""+size2);
-                   formatid=".avi";
-                   format="avi";
-                   break;
-           case 2:audiocodec="libmp3lame";
-                   bitra=96000;
-                   chana=1;
-                   sampa=44100;
-                   videocodec="mpeg4";
-                   bitrv=192000;
-                   framv=30;
-                   size1=640;
-                   size2=480;
-                   bitr_a.setText(""+bitra);
-                   chan_a.setText(""+chana);
-                   samp_a.setText(""+sampa);
-                   bitr_v.setText(""+bitrv);
-                   fram_v.setText(""+framv);
-                   size_1.setText(""+size1);
-                   size_2.setText(""+size2);
-                   formatid=".avi";
-                   format="avi";
-                   break;
-        case 3:audiocodec="libfaac";
-                   bitra=12000;
-                   chana=1;
-                   sampa=8000;
-                   videocodec="h263";
-                   bitrv=240000;
-                   framv=30;
-                   size1=176;
-                   size2=144;
-                   bitr_a.setText(""+bitra);
-                   chan_a.setText(""+chana);
-                   samp_a.setText(""+sampa);
-                   bitr_v.setText(""+bitrv);
-                   fram_v.setText(""+framv);
-                   size_1.setText(""+size1);
-                   size_2.setText(""+size2);
-                   formatid=".3gp";
-                   format="3gp";
-                   break;
-        case 4:audiocodec="libmp3lame";
-                   bitra=384000;
-                   chana=1;
-                   sampa=48000;
-                   videocodec="mpeg2video";
-                   bitrv=4000000;
-                   framv=30;
-                   size1=720;
-                   size2=480;
-                   bitr_a.setText(""+bitra);
-                   chan_a.setText(""+chana);
-                   samp_a.setText(""+sampa);
-                   bitr_v.setText(""+bitrv);
-                   fram_v.setText(""+framv);
-                   size_1.setText(""+size1);
-                   size_2.setText(""+size2);
-                   formatid=".vob";
-                   format="vob";
-                   break;
-                  
-        }
-         
-    }//GEN-LAST:event_VideoFormatBoxActionPerformed
+            bitra=64000;
+            chana=1;
+            sampa=22050;
+            videocodec="flv";
+            bitrv=160000;
+            framv=15;
+            size1=640;
+            size2=480;
+            bitr_a.setText(""+bitra);
+            chan_a.setText(""+chana);
+            samp_a.setText(""+sampa);
+            bitr_v.setText(""+bitrv);
+            fram_v.setText(""+framv);
+            size_1.setText(""+size1);
+            size_2.setText(""+size2);
+            formatid=".flv";
+            format="flv";
+            break;
+            case 1:audiocodec="libmp3lame";
+            bitra=64000;
+            chana=1;
+            sampa=22050;
+            videocodec="libxvid";
+            bitrv=192000;
+            framv=30;
+            size1=640;
+            size2=480;
+            bitr_a.setText(""+bitra);
+            chan_a.setText(""+chana);
+            samp_a.setText(""+sampa);
+            bitr_v.setText(""+bitrv);
+            fram_v.setText(""+framv);
+            size_1.setText(""+size1);
+            size_2.setText(""+size2);
+            formatid=".avi";
+            format="avi";
+            break;
+            case 2:audiocodec="libmp3lame";
+            bitra=96000;
+            chana=1;
+            sampa=44100;
+            videocodec="mpeg4";
+            bitrv=192000;
+            framv=30;
+            size1=640;
+            size2=480;
+            bitr_a.setText(""+bitra);
+            chan_a.setText(""+chana);
+            samp_a.setText(""+sampa);
+            bitr_v.setText(""+bitrv);
+            fram_v.setText(""+framv);
+            size_1.setText(""+size1);
+            size_2.setText(""+size2);
+            formatid=".avi";
+            format="avi";
+            break;
+            case 3:audiocodec="libfaac";
+            bitra=12000;
+            chana=1;
+            sampa=8000;
+            videocodec="h263";
+            bitrv=240000;
+            framv=30;
+            size1=176;
+            size2=144;
+            bitr_a.setText(""+bitra);
+            chan_a.setText(""+chana);
+            samp_a.setText(""+sampa);
+            bitr_v.setText(""+bitrv);
+            fram_v.setText(""+framv);
+            size_1.setText(""+size1);
+            size_2.setText(""+size2);
+            formatid=".3gp";
+            format="3gp";
+            break;
+            case 4:audiocodec="libmp3lame";
+            bitra=384000;
+            chana=1;
+            sampa=48000;
+            videocodec="mpeg2video";
+            bitrv=4000000;
+            framv=30;
+            size1=720;
+            size2=480;
+            bitr_a.setText(""+bitra);
+            chan_a.setText(""+chana);
+            samp_a.setText(""+sampa);
+            bitr_v.setText(""+bitrv);
+            fram_v.setText(""+framv);
+            size_1.setText(""+size1);
+            size_2.setText(""+size2);
+            formatid=".vob";
+            format="vob";
+            break;
 
-    private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
-        // TODO add your handling code here:
-   System.exit(0);
-    }//GEN-LAST:event_ExitButtonActionPerformed
+        }
+
+    }//GEN-LAST:event_VideoFormatBoxActionPerformed
 
     private void StartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartButtonActionPerformed
         // TODO add your handling code here:
         try{
-        File input=new File(fileLocn);
-        File output=new File(filax+formatid); 
-        AudioAttributes audio=new AudioAttributes();
-        audio.setCodec(audiocodec);
-        audio.setBitRate(Integer.parseInt(bitr_a.getText()));
-        audio.setChannels(Integer.parseInt(chan_a.getText()));
-        audio.setSamplingRate(Integer.parseInt(samp_a.getText()));
-         VideoAttributes video=new VideoAttributes();
-        video.setCodec(videocodec);
-        video.setBitRate(Integer.parseInt(bitr_v.getText()));
-        video.setFrameRate(Integer.parseInt(fram_v.getText()));
-        video.setSize(new VideoSize(Integer.parseInt(size_1.getText()),Integer.parseInt(size_2.getText())));
-        EncodingAttributes attrs=new EncodingAttributes();
-        attrs.setFormat(format);
-        attrs.setAudioAttributes(audio);
-        attrs.setVideoAttributes(video);
-        Encoder encode=new Encoder();
-        encode.encode(input, output, attrs);
+            File input=new File(fileLocn);
+            File output=new File(filax+formatid);
+
+            AudioAttributes audio=new AudioAttributes();
+            audio.setCodec(audiocodec);
+            audio.setBitRate(Integer.parseInt(bitr_a.getText()));
+            audio.setChannels(Integer.parseInt(chan_a.getText()));
+            audio.setSamplingRate(Integer.parseInt(samp_a.getText()));
+            VideoAttributes video=new VideoAttributes();
+            video.setCodec(videocodec);
+            video.setBitRate(Integer.parseInt(bitr_v.getText()));
+            video.setFrameRate(Integer.parseInt(fram_v.getText()));
+            video.setSize(new VideoSize(Integer.parseInt(size_1.getText()),Integer.parseInt(size_2.getText())));
+            EncodingAttributes attrs=new EncodingAttributes();
+            attrs.setFormat(format);
+            attrs.setAudioAttributes(audio);
+            attrs.setVideoAttributes(video);
+            Encoder encode=new Encoder();
+            encode.encode(input, output, attrs);
+
         }
-  
-       catch (EncoderException | IllegalArgumentException e){
-           JOptionPane.showMessageDialog(null, e);
-       }
+        catch (EncoderException | IllegalArgumentException e){
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_StartButtonActionPerformed
+
+    private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_ExitButtonActionPerformed
 
     private void AboutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AboutButtonActionPerformed
         // TODO add your handling code here:
         Credits.main(null);
     }//GEN-LAST:event_AboutButtonActionPerformed
-
-    private void AudioFormatBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AudioFormatBoxActionPerformed
-        // TODO add your handling code here:
-        VideoFormatBox.setEnabled(false);
-        parampanel.setEnabled(true);
-        audioparam.setEnabled(true);
-        videoparam.setEnabled(false);
-        StartButton.setEnabled(true);
-        int state=AudioFormatBox.getSelectedIndex();
-        switch(state){
-            case 0:audiocodec="libmp3lame";
-                   bitra=64000;
-                   chana=1;
-                   sampa=22050;
-                   bitr_a.setText(""+bitra);
-                   chan_a.setText(""+chana);
-                   samp_a.setText(""+sampa);
-                   formatid=".mp3";
-                   format="mp3";
-                   break;
-            case 1:audiocodec="pcm_s16le";
-                   bitra=176400;
-                   chana=1;
-                   sampa=11025;
-                   bitr_a.setText(""+bitra);
-                   chan_a.setText(""+chana);
-                   samp_a.setText(""+sampa);
-                   formatid=".wav";
-                   format="wav";
-                   break;
-
-            case 2:audiocodec="vorbis";
-                   bitra=128000;
-                   chana=1;
-                   sampa=11025;
-                   bitr_a.setText(""+bitra);
-                   chan_a.setText(""+chana);
-                   samp_a.setText(""+sampa);
-                   formatid=".ogg";
-                   format="ogg";
-                   break;
-        }
-    }//GEN-LAST:event_AudioFormatBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -609,7 +543,6 @@ public class ConvertX extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AboutButton;
-    private javax.swing.JComboBox AudioFormatBox;
     private javax.swing.JButton BrowseButton;
     private javax.swing.JButton ExitButton;
     private javax.swing.JButton StartButton;
@@ -619,22 +552,22 @@ public class ConvertX extends javax.swing.JFrame {
     private javax.swing.JTextField bitr_v;
     private javax.swing.JTextField chan_a;
     private javax.swing.JTextField filelocation;
-    private javax.swing.JPanel formatpanel;
     private javax.swing.JTextField fram_v;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel59;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JPanel parampanel;
     private javax.swing.JProgressBar progbar;
     private javax.swing.JTextField samp_a;
