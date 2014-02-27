@@ -567,7 +567,20 @@ public class ConvertX extends javax.swing.JFrame {
                    formatid=".wav";
                    format="wav";
                    break;
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+            case 2:audiocodec="vorbis";
+                   bitra=128000;
+                   chana=1;
+                   sampa=11025;
+                   bitr_a.setText(""+bitra);
+                   chan_a.setText(""+chana);
+                   samp_a.setText(""+sampa);
+                   formatid=".ogg";
+                   format="ogg";
+                   break;
+>>>>>>> Buggy .OGG Vorbis audio support
         }
     }//GEN-LAST:event_AudioFormatBoxActionPerformed
 
