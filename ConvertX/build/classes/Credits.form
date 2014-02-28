@@ -162,7 +162,7 @@
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
             <Property name="tabSize" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="Coding, Design and Support by Mayukh Nair&#xa;Testing: Mayukh Nair, Rohitashva Vashishtha (Windows), Shubham Rao (Ubuntu/OpenSUSE), Harsh Songra (Mac OS X)&#xa;GUI Tweaking (Linux) and Issue patching by Shubham Rao&#xa;For feedback/complaints, contact the developer at nairmayukh@gmail.com.&#xa;Have an issue? Let the developers know. File an issue at http://www.github.com/mayukhnair/convertx"/>
+            <Property name="text" type="java.lang.String" value="Coding, Design and Support by Mayukh Nair&#xa;Testing: Mayukh Nair, Rohitashva Vashishtha, Soham Chowdhury, Siddharth Erat (Windows), Shubham Rao (Ubuntu/OpenSUSE), Harsh Songra (Mac OS X)&#xa;GUI Tweaking (Linux) and Issue patching by Shubham Rao&#xa;For feedback/complaints, contact the developer at nairmayukh@gmail.com.&#xa;Have an issue? Let the developers know. File an issue at http://www.github.com/mayukhnair/convertx"/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
             <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" id="red" palette="1" red="ff" type="palette"/>

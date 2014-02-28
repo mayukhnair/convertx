@@ -77,7 +77,7 @@ public class Credits extends javax.swing.JFrame {
         credit1.setLineWrap(true);
         credit1.setRows(5);
         credit1.setTabSize(4);
-        credit1.setText("Coding, Design and Support by Mayukh Nair\nTesting: Mayukh Nair, Rohitashva Vashishtha (Windows), Shubham Rao (Ubuntu/OpenSUSE), Harsh Songra (Mac OS X)\nGUI Tweaking (Linux) and Issue patching by Shubham Rao\nFor feedback/complaints, contact the developer at nairmayukh@gmail.com.\nHave an issue? Let the developers know. File an issue at http://www.github.com/mayukhnair/convertx");
+        credit1.setText("Coding, Design and Support by Mayukh Nair\nTesting: Mayukh Nair, Rohitashva Vashishtha, Soham Chowdhury, Siddharth Erat (Windows), Shubham Rao (Ubuntu/OpenSUSE), Harsh Songra (Mac OS X)\nGUI Tweaking (Linux) and Issue patching by Shubham Rao\nFor feedback/complaints, contact the developer at nairmayukh@gmail.com.\nHave an issue? Let the developers know. File an issue at http://www.github.com/mayukhnair/convertx");
         credit1.setWrapStyleWord(true);
         credit1.setCaretColor(java.awt.Color.red);
         credit1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));

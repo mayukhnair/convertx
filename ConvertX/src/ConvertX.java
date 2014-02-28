@@ -90,6 +90,7 @@ public class ConvertX extends javax.swing.JFrame {
         AboutButtonAudio = new javax.swing.JButton();
         preserveaudio = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         jLabel5.setText("jLabel5");
 
@@ -125,7 +126,7 @@ public class ConvertX extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel13.setText("ConvertX version 0.1 Beta © 2014 Mayukh Nair. All rights reserved.");
+        jLabel13.setText("ConvertX version 0.3 Release Candidate 1 © 2014 Mayukh Nair. All rights reserved.");
 
         parampanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Geeky Stuff"));
         parampanel.setEnabled(false);
@@ -449,13 +450,12 @@ public class ConvertX extends javax.swing.JFrame {
 
         jLabel2.setText("This prevents change in audio quality.");
 
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imglib/colorful-music-cool-facebook-timeline-covers.jpg"))); // NOI18N
+
         javax.swing.GroupLayout parampanelaudioLayout = new javax.swing.GroupLayout(parampanelaudio);
         parampanelaudio.setLayout(parampanelaudioLayout);
         parampanelaudioLayout.setHorizontalGroup(
             parampanelaudioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(parampanelaudioLayout.createSequentialGroup()
-                .addComponent(progbaraudio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
             .addGroup(parampanelaudioLayout.createSequentialGroup()
                 .addGroup(parampanelaudioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(parampanelaudioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -474,6 +474,11 @@ public class ConvertX extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2)))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(progbaraudio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, parampanelaudioLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addGap(35, 35, 35))
         );
         parampanelaudioLayout.setVerticalGroup(
             parampanelaudioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -486,20 +491,22 @@ public class ConvertX extends javax.swing.JFrame {
                 .addGroup(parampanelaudioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(preserveaudio)
                     .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(parampanelaudioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(parampanelaudioLayout.createSequentialGroup()
                         .addComponent(StartButtonaudio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(ExitButtonAudio)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(AboutButtonAudio))
+                        .addComponent(AboutButtonAudio)
+                        .addGap(35, 35, 35))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, parampanelaudioLayout.createSequentialGroup()
                         .addComponent(audioparamaudio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(19, 19, 19)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(progbaraudio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(progbaraudio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -520,7 +527,7 @@ public class ConvertX extends javax.swing.JFrame {
                 .addComponent(AudioFormatBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(parampanelaudio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         videopane.addTab("Convert to Audio", jPanel2);
@@ -879,6 +886,7 @@ public class ConvertX extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel parampanel;
