@@ -5,10 +5,10 @@
 *.war
 *.ear
 
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-nbactions.xml
-nb-configuration.xml
+ConvertX/nbproject/private/
+ConvertX/build/
+ConvertX/nbbuild/
+ConvertX/dist/
+ConvertX/nbdist/
+ConvertX/nbactions.xml
+ConvertX/nb-configuration.xml
